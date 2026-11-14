@@ -1,0 +1,134 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Mini_project {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] itemNames = {"Apples", "Bananas", "Milk", "Bread", "Eggs"};
+        double[] itemPrices = {1.50, 0.75, 2.25, 1.80, 3.00};
+        int[] itemStock = {20, 30, 15, 10, 25};
+        ArrayList<String> cartNames = new ArrayList<>();
+        ArrayList<Integer> cartQuantities = new ArrayList<>();
+        ArrayList<Double> cartPrices = new ArrayList<>();
+
+        boolean running = true;
+
+        while (running) {
+            System.out.println("\n=== GROCERY STORE MENU ===");
+            System.out.println("1. View Store Inventory");
+            System.out.println("2. Add Item to Cart");
+            System.out.println("3. Remove Item from Cart");
+            System.out.println("4. View Cart");
+            System.out.println("5. Checkout & Update Stock");
+            System.out.println("6. Exit");
+            System.out.print("Choose an option: ");
+
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("\n--- Store Inventory ---");
+                    for (int i = 0; i < itemNames.length; i++) {
+                        System.out.println((i + 1) + ". " + itemNames[i] + 
+                                           " | Price: $" + itemPrices[i] + 
+                                           " | Stock: " + itemStock[i]);
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Enter item number (1 to " + itemNames.length + "): ");
+                    int itemNum = sc.nextInt() - 1; // 0-based index for arrays
+
+                    if (itemNum >= 0 && itemNum < itemNames.length) {
+                        System.out.print("Enter quantity: ");
+                        int qty = sc.nextInt();
+
+                        if (qty > 0 && qty <= itemStock[itemNum]) {
+                            // Using ArrayList .add() method
+                            cartNames.add(itemNames[itemNum]);
+                            cartQuantities.add(qty);
+                            cartPrices.add(itemPrices[itemNum] * qty);
+                            System.out.println(qty + " " + itemNames[itemNum] + "(s) added to cart.");
+                        } else {
+                            System.out.println("Invalid quantity or not enough stock!");
+                        }
+                    } else {
+                        System.out.println("Invalid item number.");
+                    }
+                    break;
+
+                case 3:
+                    if (cartNames.isEmpty()) {
+                        System.out.println("Your cart is empty.");
+                    } else {
+                        System.out.println("\n--- Your Cart ---");
+                        for (int i = 0; i < cartNames.size(); i++) {
+                            System.out.println((i + 1) + ". " + cartNames.get(i) + " x" + cartQuantities.get(i));
+                        }
+                        System.out.print("Enter cart item number to remove: ");
+                        int removeIndex = sc.nextInt() - 1;
+
+                        if (removeIndex >= 0 && removeIndex < cartNames.size()) {
+                            System.out.println("Removed " + cartNames.get(removeIndex) + " from cart.");
+                            cartNames.remove(removeIndex);
+                            cartQuantities.remove(removeIndex);
+                            cartPrices.remove(removeIndex);
+                        } else {
+                            System.out.println("Invalid cart item number.");
+                        }
+                    }
+                    break;
+
+                case 4:
+                    System.out.println("\n--- Your Shopping Cart ---");
+                    if (cartNames.isEmpty()) {
+                        System.out.println("Cart is currently empty.");
+                    } else {
+                        double total = 0;
+                        for (int i = 0; i < cartNames.size(); i++) {
+                            System.out.println(cartNames.get(i) + " | Qty: " + cartQuantities.get(i) + 
+                                               " | Subtotal: $" + cartPrices.get(i));
+                            total += cartPrices.get(i);
+                        }
+                        System.out.println("Total Amount: $" + total);
+                    }
+                    break;
+                    case 5:
+                    
+                    if (cartNames.isEmpty()) {
+                        System.out.println("Cart is empty. Nothing to checkout.");
+                    } else {
+                        System.out.println("\n=== CHECKOUT SUMMARY ===");
+                        int totalQuantity = 0;
+                        double finalTotal = 0;
+
+                        
+                        for (int i = 0; i < cartNames.size(); i++) {
+                            System.out.println("- " + cartNames.get(i) + " x" + cartQuantities.get(i) + " | Subtotal: $" + cartPrices.get(i));
+                            totalQuantity += cartQuantities.get(i);
+                            finalTotal += cartPrices.get(i);
+                        }
+
+                        System.out.println("Total Items Bought: " + totalQuantity);
+                        System.out.println("Total Amount Paid: $" + finalTotal);
+
+                        
+                        System.out.println("\n--- Final Inventory Stock ---");
+                        for (int i = 0; i < itemNames.length; i++) {
+                            System.out.println(itemNames[i] + " | Remaining Stock: " + itemStock[i]);
+                        }
+                        cartNames.clear();
+                        cartQuantities.clear();
+                        cartPrices.clear();
+                        System.out.println("\nThank you for your purchase! Cart has been cleared.");
+                    }
+                    break;
+
+                case 6:
+                    
+                    running = false;
+                    System.out.println("Exiting application. Goodbye!");
+                    break;
+            }
+        }
+        sc.close();
+    }
+}
