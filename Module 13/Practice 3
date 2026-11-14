@@ -1,0 +1,15 @@
+public class Practice_3 {
+   public Practice_3() {
+   }
+
+   public static void printNumbers() {
+      for(int var0 = 1; var0 <= 10; ++var0) {
+         System.out.println(var0);
+      }
+
+   }
+
+   public static void main(String[] var0) {
+      printNumbers();
+   }
+}
