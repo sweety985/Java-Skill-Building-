@@ -1,0 +1,22 @@
+public class Practice_2 {
+   public Practice_2() {
+   }
+
+   public static void printHeader() {
+      System.out.println("=== HEADER: Welcome to My Website ===");
+   }
+
+   public static void printBody() {
+      System.out.println("--- BODY: This is the main content area. ---");
+   }
+
+   public static void printFooter() {
+      System.out.println("=== FOOTER: Copyright 2026. All rights reserved. ===");
+   }
+
+   public static void main(String[] var0) {
+      printHeader();
+      printBody();
+      printFooter();
+   }
+}
