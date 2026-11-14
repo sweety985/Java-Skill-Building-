@@ -1,0 +1,17 @@
+public class Practice_1 {
+   public Practice_1() {
+   }
+
+   public static void main(String[] var0) {
+      String var1 = "Alia";
+      String var2 = "bhatt";
+      String var3 = var1.concat(" ").concat(var2);
+      System.out.println("Full Name: " + var3);
+      String var4 = "banana and apple";
+      String var5 = var4.replace('a', 'x');
+      System.out.println("Replaced Text: " + var5);
+      String var6 = "   Hello, Java World!   ";
+      String var7 = var6.trim();
+      System.out.println("Clean String: '" + var7 + "'");
+   }
+}
