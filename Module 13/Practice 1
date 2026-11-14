@@ -1,0 +1,14 @@
+public class Practice_1 {
+   public Practice_1() {
+   }
+
+   public static void displayInfo() {
+      System.out.println("Name: Alex");
+      System.out.println("Grade: 10");
+      System.out.println("Favorite Subject: Computer Science");
+   }
+
+   public static void main(String[] var0) {
+      displayInfo();
+   }
+}
