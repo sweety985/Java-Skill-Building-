@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Practice_2 {
+   public Practice_2() {
+   }
+
+   public static void main(String[] var0) {
+      Scanner var1 = new Scanner(System.in);
+      System.out.print("Enter your full name: ");
+      String var2 = var1.nextLine();
+      String var3 = var2.toUpperCase();
+      System.out.println("Uppercase Name: " + var3);
+      String[] var4 = var2.split(" ");
+      char var5 = var4[0].charAt(0);
+      char var6 = var4[1].charAt(0);
+      System.out.println("Initials: " + var5 + "." + var6 + ".");
+      var1.close();
+   }
+}
