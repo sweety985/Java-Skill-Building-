@@ -1,0 +1,15 @@
+public class Practice_3 {
+   public Practice_3() {
+   }
+
+   public static void main(String[] var0) {
+      String var1 = "Java learning is so fun";
+      String var2 = "Java";
+      if (var1.indexOf(var2) != -1) {
+         System.out.println("found");
+      } else {
+         System.out.println("not found");
+      }
+
+   }
+}
