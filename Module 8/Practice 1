@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Practice_2 {
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your username: ");
+        String name = sc.nextLine(); 
+        System.out.print("Enter your password: ");
+        int number = sc.nextInt();
+        
+        
+        if (number  == 123456 && name.equals("Sweety")) {
+            System.out.println("Login Successful");
+        } 
+        else {
+            System.out.println("Incorrect Credentials");
+        }
+        
+        sc.close();
+    }
+}
