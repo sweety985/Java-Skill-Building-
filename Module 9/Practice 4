@@ -1,32 +1,24 @@
 import java.util.Scanner;
 
-public class PR_1 {
-   public PR_1() {
-   }
-
-   public static void main(String[] var0) {
-      String var1 = "Sweety123";
-      boolean var2 = true;
-      int var3 = 0;
-      Scanner var4 = new Scanner(System.in);
-
-      while(true) {
-         if (var3 == 3) {
-            System.out.println("Too many incorrect attempts. Access locked.");
-            break;
-         }
-
-         System.out.print("Enter password: ");
-         String var5 = var4.nextLine();
-         if (var5.equals(var1)) {
-            System.out.println("Access granted!");
-            break;
-         }
-
-         ++var3;
-         System.out.println("Wrong password.");
-         var4.close();
-      }
-
-   }
+public class Practice_4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter first side (a): ");
+        int a = scanner.nextInt();
+        
+        System.out.print("Enter second side (b): ");
+        int b = scanner.nextInt();
+        
+        System.out.print("Enter third side (c): ");
+        int c = scanner.nextInt();
+        
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            System.out.println("The given sides can form a valid triangle.");
+        } else {
+            System.out.println("The given sides cannot form a valid triangle.");
+        }
+        
+        scanner.close();
+    }
 }
