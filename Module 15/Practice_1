@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class FibonacciPrinter {
+
+    
+    public void printFibonacci(int count) {
+        if (count <= 0) {
+            System.out.println("Please enter a positive integer.");
+            return;
+        }
+
+        long first = 0;
+        long second = 1;
+
+        System.out.print("Fibonacci Series: ");
+        
+        for (int i = 1; i <= count; i++) {
+            System.out.print(first + " ");
+            
+            long next = first + second;
+            first = second;
+            second = next;
+        }
+        System.out.println(); 
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter how many Fibonacci numbers to print: ");
+        int n = scanner.nextInt();
+
+        
+        FibonacciPrinter printer = new FibonacciPrinter();
+        printer.printFibonacci(n);
+        
+        scanner.close();
+    }
+}
