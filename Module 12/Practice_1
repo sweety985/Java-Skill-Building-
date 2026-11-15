@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+public class PR_1 {
+    public static void main(String[] args) {
+        String correctPassword = "Sweety123";
+        int maxAttempts = 3;
+        int attempts = 0;
+        Scanner sc = new Scanner(System.in);
+
+        while (true) {
+            if (attempts == 3) {
+                System.out.println("Too many incorrect attempts. Access locked.");
+                break;
+            }
+            System.out.print("Enter password: ");
+            String password = sc.nextLine();
+
+            if (password.equals(correctPassword)) {
+                System.out.println("Access granted!");
+                break;
+            }
+            else {
+                attempts++;
+                System.out.println("Wrong password.");
+            }
+            
+
+}
+
+}
+}
