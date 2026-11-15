@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Practice_3 {
+   public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter Cost Price: ");
+        double cp = scanner.nextDouble();
+        
+        System.out.print("Enter Selling Price: ");
+        double sp = scanner.nextDouble(); 
+        if (sp > cp) {
+            double profit = sp - cp;
+            double profitPercentage = (profit / cp) * 100;
+            System.out.println("Status: Profit incurred");
+            System.out.println("Profit Amount: " + profit);
+            System.out.println("Profit Percentage: " + profitPercentage + "%");
+        } else if (sp < cp) {
+            double loss = cp - sp;
+            double lossPercentage = (loss / cp) * 100;
+            System.out.println("Status: Loss incurred");
+            System.out.println("Loss Amount: " + loss);
+            System.out.println("Loss Percentage: " + lossPercentage + "%");
+        } else {
+            System.out.println("Status: Neither profit nor loss");
+            System.out.println("Amount: 0");
+            System.out.println("Percentage: 0%");
+        }
+        
+        scanner.close();
+    }
+}
