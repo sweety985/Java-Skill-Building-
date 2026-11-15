@@ -1,0 +1,10 @@
+
+
+public class Practice_3 {
+    public static void main(String[] args) {
+        double randomNum = Math.random();
+        int dieRoll = (int) (randomNum * 6) + 1;
+        System.out.println("You rolled a: " + dieRoll);
+    }
+}
+
