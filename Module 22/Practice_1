@@ -1,0 +1,26 @@
+
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Practice_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList<>();
+        System.out.println("Please enter 3 names:");
+        for (int i = 1; i <= 3; i++) {
+            System.out.print("Enter name " + i + ": ");
+            String inputName = sc.nextLine();
+            names.add(inputName); 
+        }
+        System.out.println("\nRemoving the second name in the list (index 1)...");
+        names.remove(1);
+        System.out.println("\nFinal list of names:");
+        for (int i = 0; i < names.size(); i++) {
+            System.out.println("Name " + (i + 1) + ": " + names.get(i));
+        }
+
+        sc.close();
+    }
+}
+
+
+
