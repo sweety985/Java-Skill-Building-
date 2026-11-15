@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+public class Practice_4 {
+    
+    public static double findHypotenuse(double base, double height) {
+        return Math.sqrt(Math.pow(base, 2) + Math.pow(height, 2));
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the base of the triangle: ");
+        double base = scanner.nextDouble();
+        System.out.print("Enter the height of the triangle: ");
+        double height = scanner.nextDouble();  
+        double hypotenuse = findHypotenuse(base, height); 
+        System.out.println("The hypotenuse is: " + hypotenuse);
+
+        scanner.close();
+    }
+}
