@@ -1,19 +1,22 @@
 import java.util.Scanner;
 
-public class Practice {
-   public Practice() {
-   }
-
-   public static void main(String[] var0) {
-      Scanner var1 = new Scanner(System.in);
-      System.out.print("Enter a number: ");
-      int var2 = var1.nextInt();
-      if (var2 % 2 == 0) {
-         System.out.println("Even");
-      } else {
-         System.out.println("Odd");
-      }
-
-      var1.close();
-   }
+public class Practice_4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter marks (out of 100): ");
+        int marks = scanner.nextInt();
+        
+        if (marks >= 90) {
+            System.out.println("Grade: A");
+        } else if (marks >= 75) {
+            System.out.println("Grade: B");
+        } else if (marks >= 50) {
+            System.out.println("Grade: C");
+        } else {
+            System.out.println("Grade: D");
+        }
+        
+        scanner.close();
+    }
 }
