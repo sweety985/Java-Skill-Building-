@@ -1,18 +1,21 @@
 import java.util.Scanner;
 
-public class Practice_1 {
+public class Practice_3 {
  public static void main(String[] args) { 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
+        System.out.print("Enter the temperature: ");
         int number = sc.nextInt();
-        if (number > 0) {
-            System.out.println("Postitve");
-        }  else if ( number == 0) {
-            System.out.println("Zero");
+        if (number < 10) {
+            System.out.println("Wear a Coat");
+        }  else if (number >= 10 && number <= 20) {
+            System.out.println("Light Jacket");
+        } else if (number >= 21 && number <= 30) {
+            System.out.println("T-shirt weather");
         }
                 else {
-            System.out.println("Negative");
+            System.out.println("Stay indoor");
         }
+        sc.close();
         }
 
     }
