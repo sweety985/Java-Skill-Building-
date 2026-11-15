@@ -1,0 +1,9 @@
+public class Practice_3 {
+    public static void main(String[] args) {
+        double[] numbers = {9.0, 25.0, 49.0, 81.0};
+        double secondElement = numbers[1]; 
+         double squareRoot = Math.sqrt(secondElement);
+        System.out.println("The second element is: " + secondElement);
+        System.out.println("The square root of the second element is: " + squareRoot);
+    }
+}
