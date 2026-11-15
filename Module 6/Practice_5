@@ -1,0 +1,32 @@
+public class NewClass2 {
+
+  public class second {
+    public static void main(String[] args) {
+    String name1 = "John";
+        int marks1 = 92;
+        int attendance1 = 85;
+        String name2 = "Maya";
+        int marks2 = 95;
+        int attendance2 = 75;
+        String result1 = (marks1 >= 90 && attendance1 >= 80) 
+                ? "is ELIGIBLE for the scholarship." 
+                : "is NOT eligible for the scholarship.";
+
+        String result2 = (marks2 >= 90 && attendance2 >= 80) 
+                ? "is ELIGIBLE for the scholarship." 
+                : "is NOT eligible for the scholarship.";
+
+        System.out.println(name1 + " " + result1);
+        System.out.println(name2 + " " + result2);
+
+        }
+    
+        
+
+
+    
+    }
+
+
+
+}
