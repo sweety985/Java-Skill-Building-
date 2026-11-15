@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Practice_3 {
+ public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the temperature: ");
+        int number = sc.nextInt();
+        if (number < 15) {
+            System.out.println("Cold");
+        }  else if (number >= 15 && number <= 30) {
+            System.out.println("Warm");
+        } else if (number > 30) {
+            System.out.println("Hot");
+        }
+        sc.close();
+        }
+
+    }
