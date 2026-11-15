@@ -1,0 +1,17 @@
+public class Practice_4 {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50, 60};
+        System.out.println("Sum of symmetric pairs from the ends inward:\n");
+        for (int i = 0; i < numbers.length / 2; i++) {
+            int leftElement = numbers[i];
+            int rightElement = numbers[numbers.length - 1 - i];
+            int sum = leftElement + rightElement;
+            System.out.println("Index " + i + " (" + leftElement + ") + Index " 
+                + (numbers.length - 1 - i) + " (" + rightElement + ") = " + sum);
+        }
+        if (numbers.length % 2 != 0) {
+            int middleIndex = numbers.length / 2;
+            System.out.println("\nMiddle element with no pair: " + numbers[middleIndex]);
+        }
+    }
+}
