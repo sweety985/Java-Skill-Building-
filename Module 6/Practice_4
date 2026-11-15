@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+public class Practice_4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter first number (a): ");
+        int a = scanner.nextInt();
+        
+        System.out.print("Enter second number (b): ");
+        int b = scanner.nextInt();
+        
+        System.out.print("Enter third number (c): ");
+        int c = scanner.nextInt();
+        boolean isTriplet = (a * a + b * b == c * c) || 
+                            (a * a + c * c == b * b) || 
+                            (b * b + c * c == a * a);
+                            
+                if (isTriplet) {
+            System.out.println("They form a Pythagorean triplet.");
+        } else {
+            System.out.println("They do not form a Pythagorean triplet.");
+        }
+        
+        scanner.close();
+    }            
+}
