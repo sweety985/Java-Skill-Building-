@@ -1,21 +1,22 @@
 import java.util.Scanner;
 
-public class Practice_3 {
- public static void main(String[] args) { 
+public class Practice_2 {
+    public static void main(String[] args) { 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the temperature: ");
+        System.out.print("Enter your username: ");
+        String name = sc.nextLine(); 
+        System.out.print("Enter your password: ");
         int number = sc.nextInt();
-        if (number < 10) {
-            System.out.println("Wear a Coat");
-        }  else if (number >= 10 && number <= 20) {
-            System.out.println("Light Jacket");
-        } else if (number >= 21 && number <= 30) {
-            System.out.println("T-shirt weather");
+        
+        
+        if (number  == 123456 && name.equals("Sweety")) {
+            System.out.println("Login Successful");
+        } 
+        else {
+            System.out.println("Incorrect Credentials");
         }
-                else {
-            System.out.println("Stay indoor");
-        }
+        
         sc.close();
-        }
-
     }
+}
+
