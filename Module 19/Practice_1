@@ -1,0 +1,12 @@
+
+
+public class Practice_1 {
+    public static void main(String[] args) {
+        String[] colors = {"Red", "Green", "Blue"};
+        colors[1] = "Yellow";
+        System.out.println("Element 1: " + colors[0]);
+        System.out.println("Element 2: " + colors[1]); 
+        System.out.println("Element 3: " + colors[2]);
+    }
+}
+
