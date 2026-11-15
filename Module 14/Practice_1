@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FactorialWhile {
+public class Practice_1 {
 
     
     public static void calculateFactorial(int n) {
