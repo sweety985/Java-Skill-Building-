@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Practice_4 {
+  public static int countDigits(int n) {
+        
+        if (n == 0) {
+            return 1;
+        }
+        
+        
+        if (n < 0) {
+            n = -n;
+        }
+        
+        int count = 0;
+        
+        
+        while (n > 0) {
+            n = n / 10;
+            count++;
+        }
+        
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
+        
+        
+        int result = countDigits(number);
+        System.out.println("Number of digits in " + number + " is: " + result);
+        
+        scanner.close();
+    }
+}
